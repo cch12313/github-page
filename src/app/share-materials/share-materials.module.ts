@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -9,7 +10,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     CommonModule
   ],
   exports: [
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule,
   ]
 })
 export class ShareMaterialsModule {

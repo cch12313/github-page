@@ -1,1 +1,11 @@
-<p>detail works!</p>
+<mat-card>
+  <mat-card-title-group>
+    <mat-card-title [innerText]="detail.title"></mat-card-title>
+    <mat-card-subtitle [innerText]="detail.comment"></mat-card-subtitle>
+    <img mat-card-sm-image
+         *ngIf="detail.image"
+         [src]="detail.image">
+  </mat-card-title-group>
+
+  <mat-card-content></mat-card-content>
+</mat-card>
