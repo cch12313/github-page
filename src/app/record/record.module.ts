@@ -6,6 +6,7 @@ import {BaseComponent} from './base/base.component';
 import {ShareMaterialsModule} from '../share-materials/share-materials.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DetailComponent } from './detail/detail.component';
+import {MarkdownModule} from 'ngx-markdown';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DetailComponent } from './detail/detail.component';
   imports: [
     CommonModule,
     ShareMaterialsModule,
-    RecordRoutingModule
+    RecordRoutingModule,
+
   ]
 })
 export class RecordModule {
