@@ -2,12 +2,12 @@
   <mat-card-title-group>
     <mat-card-title [innerText]="detail.title"></mat-card-title>
     <mat-card-subtitle [innerText]="detail.comment"></mat-card-subtitle>
-    <img mat-card-sm-image
+    <img mat-card-image
          *ngIf="detail.image"
          [src]="detail.image">
   </mat-card-title-group>
-
   <mat-card-content>
-    <markdown src="../../../assets/md/test.md"></markdown>
+    <div markdown [src]="detail.mdPath"></div>
   </mat-card-content>
 </mat-card>
+
