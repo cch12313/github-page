@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {RecordDetail} from '../record-detail';
+import {environment} from '../../../environments/environment';
 
 const TEST_STRUCT: RecordDetail = {
-  mdPath: 'assets/md/test.md',
+  mdPath: environment.mdPath + 'test.md',
   image: '',
   title: 'test',
   comment: 'test comment'
@@ -14,9 +15,10 @@ const TEST_STRUCT: RecordDetail = {
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  detail = TEST_STRUCT;
+  // detail = TEST_STRUCT;
 
   constructor() { }
+
 
   ngOnInit(): void {
   }

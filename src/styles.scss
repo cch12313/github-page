@@ -5,3 +5,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .container {
   height: 100%;
 }
+
+.sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}

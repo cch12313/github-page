@@ -8,13 +8,15 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {DetailComponent} from './detail/detail.component';
 import {MarkdownModule} from 'ngx-markdown';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { SideComponent } from './side/side.component';
 
 
 @NgModule({
   declarations: [
     BaseComponent,
     DashboardComponent,
-    DetailComponent
+    DetailComponent,
+    SideComponent,
   ],
   imports: [
     HttpClientModule,
