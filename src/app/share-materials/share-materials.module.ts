@@ -4,6 +4,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatCardModule,
     MatTreeModule,
     MatIconModule,
+    MatButtonModule,
   ],
 })
 export class ShareMaterialsModule {
