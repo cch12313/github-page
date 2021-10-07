@@ -4,6 +4,7 @@ import {FlatTreeControl} from '@angular/cdk/tree';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 import {SideTreeFlatNode} from './side-tree-flat-node';
 import {SideNode} from './side-node';
+import {RecordDetail} from '../record-detail';
 
 @Component({
   selector: 'app-side',
@@ -22,9 +23,27 @@ export class SideComponent implements OnInit {
   constructor(
     private record: RecordService
   ) {
+    this.dataSource.data = this.detailToNodeRecursive(record.tree, '');
   }
 
-  records = this.record.tree;
+  private detailToNodeRecursive(details: RecordDetail[], path: string): SideNode[] {
+    return details.map(detail => {
+      const hasChildren = (detail.children?.length ?? 0) > 0;
+
+      if (hasChildren && detail.children) {
+        return {
+          name: detail.title,
+          href: '',
+          children: this.detailToNodeRecursive(detail.children, path + detail.fileName)
+        };
+      }
+
+      return {
+        name: detail.title,
+        href: (path ? path + '/' : '') + detail.fileName,
+      };
+    });
+  }
 
   ngOnInit(): void {
     this.treeControl.expandAll();
