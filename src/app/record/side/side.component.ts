@@ -29,24 +29,29 @@ export class SideComponent implements OnInit {
   private detailToNodeRecursive(details: RecordDetail[], path: string): SideNode[] {
     return details.map(detail => {
       const hasChildren = (detail.children?.length ?? 0) > 0;
+      const newPath = this.getUrlPath(path);
 
       if (hasChildren && detail.children) {
         return {
           name: detail.title,
           href: '',
-          children: this.detailToNodeRecursive(detail.children, path + detail.fileName)
+          children: this.detailToNodeRecursive(detail.children, newPath + detail.fileName)
         };
       }
 
       return {
         name: detail.title,
-        href: (path ? path + '/' : '') + detail.fileName,
+        href: newPath + detail.fileName,
       };
     });
   }
 
+  private getUrlPath(path: string): string{
+    return path ? path + '/' : '';
+  }
+
   ngOnInit(): void {
-    this.treeControl.expandAll();
+    // this.treeControl.expandAll();
   }
 
 

@@ -10,7 +10,15 @@ const RECORD_TREE: RecordDetail[] = [
     comment: '',
     children: [
       {
-        fileName: '9',
+        fileName: '10',
+        title: '10月',
+        comment: '',
+        children: [
+          {fileName: '20211003.md', title: '第一週', comment: 'test', image: ''},
+        ]
+      },
+      {
+        fileName: '09',
         title: '9月',
         comment: '',
         children: [
@@ -21,14 +29,6 @@ const RECORD_TREE: RecordDetail[] = [
 
         ]
       },
-      {
-        fileName: '10',
-        title: '10月',
-        comment: '',
-        children: [
-          {fileName: '20211003.md', title: '第一週', comment: 'test', image: ''},
-        ]
-      }
     ]
   }
 ];

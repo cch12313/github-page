@@ -9,7 +9,7 @@ const routes: Routes = [
     component: BaseComponent,
     children: [
       {path: '', component: DashboardComponent},
-      {path: ':id', component: DashboardComponent}
+      {path: ':year/:month/:file', component: DashboardComponent}
     ]
   }
 ];

@@ -7,14 +7,18 @@ import {RecordDetail} from '../record-detail';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-  @Input() path!: string;
+  @Input() path!: string[];
   @Input() title!: string;
   @Input() comment!: string;
   @Input() image!: string;
 
-  constructor() { }
+  mdPath = '';
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.mdPath = this.path.join('/');
   }
 
 }
