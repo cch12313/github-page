@@ -11,7 +11,8 @@ const routes: Routes = [
       {path: '', component: DashboardComponent},
       {path: ':year/:month/:file', component: DashboardComponent}
     ]
-  }
+  },
+  {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({
