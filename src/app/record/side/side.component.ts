@@ -51,7 +51,7 @@ export class SideComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.treeControl.expandAll();
+    this.treeControl.expandAll();
   }
 
 
