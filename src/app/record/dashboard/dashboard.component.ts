@@ -3,6 +3,7 @@ import {ActivatedRoute, Params} from '@angular/router';
 import {RecordService} from '../record.service';
 import {RecordDetail} from '../record-detail';
 import {environment} from '../../../environments/environment';
+import {distinctUntilChanged, skip} from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard',
@@ -21,6 +22,10 @@ export class DashboardComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.route.url.pipe(
+      skip(1),
+      distinctUntilChanged(),
+    ).subscribe(_ => window.location.reload());
   }
 
   private urlParam(params: Params) {
