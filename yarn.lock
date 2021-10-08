@@ -133,6 +133,11 @@
     ora "5.4.1"
     rxjs "6.6.7"
 
+"@angular-package/change-detection@^0.1.1":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@angular-package/change-detection/-/change-detection-0.1.4.tgz#ebf0225ce5001b2e5cb0b71e9f483bc103536b2f"
+  integrity sha512-xVEioJ3rZmNhc6qsggOwdteqdTXBBrLZo7Uxga8MvwVqf/sk+mOx3NMXqzfYDZMlRBKy9HtNaBg02rRwbcp0lw==
+
 "@angular/animations@~12.2.7":
   version "12.2.7"
   resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-12.2.7.tgz#7000cd81ae3d84a09082c3e6576f1b75a72cf629"
@@ -1245,6 +1250,13 @@
   version "12.2.7"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-12.2.7.tgz#864b66c0c80acbe6b0cb15ff205b7fbbca7f8d0e"
   integrity sha512-RX5UQA9Bwp/J5GPGtJiwEOQUdf/0UqdeIZtktOZJ4x3K676l//PCFxxxgGqi2qUR2eu/wLAyiDhvDwqDixsngQ==
+
+"@ngx-prism/core@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@ngx-prism/core/-/core-2.0.1.tgz#2fe39d84d3ef27cc1ffacf434945925944dd52c9"
+  integrity sha512-g6J7ySHZjco7RpU2jrgIaj6G3PKTei897c0w5fsiEidTSXNQZXRw6IhJUbEPBHjcUKny7/ktsYGbTCBa7uj15Q==
+  dependencies:
+    "@angular-package/change-detection" "^0.1.1"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
