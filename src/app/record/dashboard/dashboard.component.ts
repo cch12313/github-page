@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
 import {RecordService} from '../record.service';
 import {RecordDetail} from '../record-detail';
+import {environment} from '../../../environments/environment';
 
 @Component({
   selector: 'app-dashboard',
@@ -72,6 +73,7 @@ export class DashboardComponent implements OnInit {
       },
       getPath(): string[] {
         return [
+          environment.mdPath,
           detail.getYear(),
           detail.getMonth(),
           detail.getFile()
