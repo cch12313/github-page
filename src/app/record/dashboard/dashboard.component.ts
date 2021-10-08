@@ -4,6 +4,7 @@ import {RecordService} from '../record.service';
 import {RecordDetail} from '../record-detail';
 import {environment} from '../../../environments/environment';
 import {distinctUntilChanged, skip} from 'rxjs/operators';
+import {BehaviorSubject} from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,6 +17,8 @@ export class DashboardComponent implements OnInit {
     private record: RecordService
   ) {
   }
+
+  isMdExist$ = new BehaviorSubject(false);
 
   params = this.urlParam(this.route.snapshot.params);
   detail = this.getRecordMapByKey(this.params.getFile(), this.record.recordMap);
@@ -47,6 +50,7 @@ export class DashboardComponent implements OnInit {
     const recordNotExist = !recordMap.has(key);
 
     if (recordNotExist) {
+      this.isMdExist$.next(false);
       return {
         getTitle(): string {
           return '';
@@ -65,6 +69,8 @@ export class DashboardComponent implements OnInit {
 
     const record = recordMap.get(key) ?? {} as RecordDetail;
     const detail = this.urlParam(this.route.snapshot.params);
+
+    this.isMdExist$.next(true);
 
     return {
       getTitle(): string {

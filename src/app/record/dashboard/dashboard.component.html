@@ -1,5 +1,5 @@
 <div class="container">
-  <app-detail
+  <app-detail *ngIf="isMdExist$ | async"
     [title]="detail.getTitle()"
     [comment]="detail.getComment()"
     [image]="detail.getImage()"
