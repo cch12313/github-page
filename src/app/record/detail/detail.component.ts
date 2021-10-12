@@ -10,7 +10,6 @@ export class DetailComponent implements OnInit {
   @Input() path!: string[];
   @Input() title!: string;
   @Input() comment!: string;
-  @Input() image!: string;
 
   mdPath = '';
 

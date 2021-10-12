@@ -2,9 +2,6 @@
   <mat-card-title-group>
     <mat-card-title [innerText]="title"></mat-card-title>
     <mat-card-subtitle [innerText]="comment"></mat-card-subtitle>
-    <img mat-card-image
-         *ngIf="image"
-         [src]="image">
   </mat-card-title-group>
   <mat-card-content>
     <div markdown [src]="mdPath"></div>
